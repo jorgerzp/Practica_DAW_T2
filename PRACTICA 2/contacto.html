@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Bodegas González" />
+  <title>Contacto | Bodega González</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/favicon.png" />
+</head>
+
+<body>
+
+  <!-- Cabecera con logotipo y menú -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo.jpg" alt="Logotipo Bodega González" class="logo">
+        <img src="images/flag.jpg" alt="Bandera de España" class="flag">
+      </a>
+
+      <button id="nav-toggle" class="nav-toggle">☰</button>
+
+      <nav id="main-nav" class="main-nav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="historia.html">Historia</a></li>
+          <li><a href="productos.html">Vinos & Productos</a></li>
+          <li><a href="catas.html">Catas</a></li>
+          <li><a href="contacto.html" class="active">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+
+    <!-- Descripción -->
+    <section class="container">
+      <h1>Contacto</h1>
+      <p>Si deseas más información sobre nuestros vinos, productos gourmet o nuestras catas, puedes escribirnos a través del formulario.</p>
+    </section>
+
+    <!-- Formulario -->
+    <section class="container">
+      <h2>Formulario de Contacto</h2>
+
+      <form class="contact-form" id="contactForm">
+
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required placeholder="tuemail@example.com">
+
+        <label for="telefono">Teléfono (opcional):</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000">
+
+        <label for="motivo">Motivo de la consulta:</label>
+        <select id="motivo" name="motivo">
+          <option value="vinos">Información sobre vinos</option>
+          <option value="productos">Productos gourmet</option>
+          <option value="catas">Reservar cata</option>
+          <option value="otros">Otros</option>
+        </select>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu mensaje"></textarea>
+
+        <button class="btn" type="submit">Enviar Mensaje</button>
+      </form>
+
+      <p id="form-msg" class="form-msg"></p>
+
+    </section>
+
+    <!-- Información adicional con mapa -->
+    <section class="container">
+      <h2>¿Dónde estamos?</h2>
+      <p>Puedes visitarnos en nuestra tienda física:</p>
+
+      <p><strong>Fildernstrasse 15</strong><br>6030 Ebikon, Suiza</p>
+
+<!-- Mapa de Google -->
+<iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2762.3045034493984!2d8.33389677660407!3d47.08049447115409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479ab122f6e576f5%3A0xcd3d6b109fa074d0!2sFildernstrasse%2015%2C%206030%20Ebikon%2C%20Suiza!5e0!3m2!1ses!2ses!4v1700000000000"
+  width="100%" height="300" style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+
+      <a class="btn" href="https://maps.google.com/?q=Fildernstrasse+15,+6030+Ebikon,+Suiza" target="_blank">
+        Abrir en Google Maps
+      </a>
+      
+    </section>
+
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p><strong>Bodega González</strong> — Fildernstrasse 15, 6030 Ebikon, Suiza</p>
+      <p>Tel: +34 600 000 000 — Email: info@bodegagonzalez.com</p>
+      <p>© 2025 Bodega González</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

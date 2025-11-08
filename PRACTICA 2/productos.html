@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Bodegas González" />
+  <title>Vinos y Productos | Bodegas González</title>
+
+  <!-- Hoja de estilos -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Fuente externa -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="images/favicon.png" />
+</head>
+
+<body>
+
+  <!-- Cabecera con logotipo, bandera y menú -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a class="brand" href="index.html">
+        <img src="images/logo.jpg" alt="Logotipo Bodegas González" class="logo">
+        <img src="images/flag.jpg" alt="Bandera de España" class="flag">
+      </a>
+
+      <button id="nav-toggle" class="nav-toggle" aria-label="Abrir menú">☰</button>
+
+      <!-- Menú principal -->
+      <nav id="main-nav" class="main-nav" aria-label="Menú principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="historia.html">Historia</a></li>
+          <li><a href="productos.html" class="active">Vinos & Productos</a></li>
+          <li><a href="catas.html">Catas</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+
+    <!-- Presentación de la categoría -->
+    <section class="container">
+      <h1>Nuestros vinos y productos</h1>
+      <p>En Bodegas González elaboramos vinos y seleccionamos productos gourmet que representan la esencia de nuestra tierra: sabor, calidad y tradición familiar.</p>
+    </section>
+
+    <!-- Vinos tintos -->
+    <section class="container">
+      <h2>Vinos Tintos</h2>
+
+      <div class="cards">
+
+        <article class="card">
+          <img src="images/reserva.jpg" alt="Vino Reserva">
+          <h4>Reserva 2018</h4>
+          <p>Aromas a frutos rojos y madera. Ideal para carnes rojas y guisos.</p>
+        </article>
+
+        <article class="card">
+          <img src="images/crianza.jpg" alt="Vino Crianza 2020">
+          <h4>Crianza 2020</h4>
+          <p>Equilibrado y con cuerpo medio. Perfecto para quesos curados.</p>
+        </article>
+
+        <article class="card">
+          <img src="images/vinojoven.jpg" alt="Vino Joven">
+          <h4>Tinto Joven</h4>
+          <p>Fresco y afrutado. Ideal con tapas y platos ligeros.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Vinos blancos -->
+    <section class="container">
+      <h2>Vinos Blancos</h2>
+
+      <div class="cards">
+
+        <article class="card">
+          <img src="images/blancoseleccion.jpg" alt="Blanco Selección">
+          <h4>Blanco Selección</h4>
+          <p>Notas cítricas y florales. Final suave y persistente.</p>
+        </article>
+
+        <article class="card">
+          <img src="images/verdejo2023.jpg" alt="Verdejo 2023">
+          <h4>Verdejo 2023</h4>
+          <p>Aromático, ligero y equilibrado. Perfecto para mariscos.</p>
+        </article>
+
+        <article class="card">
+          <img src="images/afrutado.jpg" alt="Blanco Afrutado">
+          <h4>Blanco Afrutado</h4>
+          <p>Toques dulces y acidez equilibrada. Ideal para postres.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Productos gourmet -->
+    <section class="container">
+      <h2>Productos Gourmet</h2>
+      <p>Además de nuestros vinos, ofrecemos una selección de productos artesanales elaborados en nuestra región.</p>
+
+      <div class="cards">
+        <article class="card">
+          <img src="images/quesomanchego.jpg" alt="Queso Manchego Curado">
+          <h4>Queso Manchego Curado</h4>
+          <p>Sabor intenso y textura firme, elaborado con leche de oveja manchega.</p>
+        </article>
+
+        <article class="card">
+          <img src="images/jamon.jpg" alt="Jamón Ibérico de Bellota">
+          <h4>Jamón Ibérico de Bellota</h4>
+          <p>Curación tradicional y sabor profundo.</p>
+        </article>
+
+        <article class="card">
+          <img src="images/aceiteoliva.jpg" alt="Aceite Virgen Extra">
+          <h4>Aceite Virgen Extra</h4>
+          <p>Prensado en frío, con notas herbales.</p>
+        </article>
+
+        <article class="card">
+          <img src="images/miel.jpg" alt="Miel artesanal">
+          <h4>Miel Artesanal</h4>
+          <p>100% natural, recogida de colmenas locales.</p>
+        </article>
+
+        <article class="card">
+          <img src="images/pate.jpg" alt="Paté de Secreto Ibérico">
+          <h4>Paté de Secreto Ibérico</h4>
+          <p>Crema suave y sabrosa, ideal para tapas.</p>
+        </article>
+      </div>
+
+    </section>
+
+    <!-- Vídeo requerido por la práctica -->
+    <section class="container">
+      <h2>Vídeo: el arte de elaborar vino</h2>
+      <p>Descubre cómo elaboramos nuestros vinos desde el viñedo hasta la copa.</p>
+
+      <div class="video-container">
+        <video controls>
+          <source src="images/video1.mp4" type="video/mp4">
+          Tu navegador no soporta la reproducción de videos.
+        </video>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p><strong>Bodega González</strong> — Fildernstrasse 15, 6030 Ebikon, Suiza</p>
+      <p>Tel: +34 600 000 000 — Email: info@bodegagonzalez.com</p>
+      <p>© 2025 Bodega González</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Bodegas González" />
+  <title>Bodega González - Tienda de Vinos y Productos Españoles en Suiza</title>
+
+  <!-- Hoja de estilos principal -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Fuente externa -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.png" />
+</head>
+
+<body>
+
+  <!-- Cabecera con logotipo, bandera y menú principal -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo.jpg" alt="Logotipo Bodegas González" class="logo">
+        <img src="images/flag.jpg" alt="Bandera de España" class="flag">
+      </a>
+
+      <!-- Botón de menú para dispositivos pequeños -->
+      <button id="nav-toggle" class="nav-toggle" aria-label="Abrir menú">☰</button>
+
+      <!-- Menú principal -->
+      <nav id="main-nav" class="main-nav" aria-label="Menú principal">
+        <ul>
+          <li><a href="index.html" class="active">Inicio</a></li>
+          <li><a href="historia.html">Historia</a></li>
+          <li><a href="productos.html">Vinos & Productos</a></li>
+          <li><a href="catas.html">Catas</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+
+    <!-- Sección hero con texto e imágenes destacadas -->
+    <section class="hero">
+      <div class="hero-inner container">
+
+        <div class="hero-text">
+          <h1>Bodega González</h1>
+          <p class="lead">Vinos y productos españoles de calidad, directamente de nuestra bodega en España a Suiza.</p>
+          <p class="cta">
+            <a class="btn" href="productos.html">Nuestros vinos</a>
+            <a class="btn ghost" href="catas.html">Reservar visita</a>
+          </p>
+        </div>
+
+        <div class="hero-image">
+          <img src="images/viniedos.png" alt="Viñedos de Bodegas González">
+          <img src="images/viniedos2.png" alt="Viñedos de Bodegas González">
+          <img src="images/viniedos3.png" alt="Viñedos de Bodegas González">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Sección sobre nosotros con listas ordenadas y desordenadas -->
+    <section class="about container" id="sobre-nosotros">
+      <article>
+        <h2>Nuestra filosofía</h2>
+        <p>En Bodegas González combinamos tradición vinícola española con la pasión por productos gourmet. Desde nuestros viñedos en España, seleccionamos vinos y productos auténticos que llegan directamente a Suiza.</p>
+
+        <h3>Valores</h3>
+        <ul>
+          <li>Tradición familiar</li>
+          <li>Sostenibilidad</li>
+          <li>Calidad y autenticidad</li>
+          <li>Productos gourmet españoles</li>
+        </ul>
+      </article>
+
+      <aside class="quick-facts">
+        <h3>Datos rápidos</h3>
+        <ol>
+          <li>Fundada en <strong>1997</strong>.</li>
+          <li>1000 hectáreas de viñedo.</li>
+          <li>Envíos y visitas disponibles en Suiza.</li>
+        </ol>
+      </aside>
+    </section>
+
+    <!-- Productos destacados -->
+    <section class="productos container">
+      <h2>Nuestros vinos y productos más destacados</h2>
+      <p>Descubre nuestra selección de vinos, aceites, quesos y delicatessen.</p>
+
+      <div class="cards">
+
+        <article class="card">
+          <img src="images/reserva.jpg" alt="Vino Reserva Bodegas González">
+          <h4>Reserva 2018</h4>
+          <p>Vino tinto crianza con notas de frutos rojos y madera.</p>
+        </article>
+
+        <article class="card">
+          <img src="images/vinojoven.jpg" alt="Vino Tinto Joven">
+          <h4>Joven Tinto</h4>
+          <p>Fresco y afrutado, ideal para comidas informales.</p>
+        </article>
+
+        <article class="card">
+          <img src="images/blancoseleccion.jpg" alt="Vino Blanco">
+          <h4>Blanco Selección</h4>
+          <p>Ligero, con aromas florales y cítricos.</p>
+        </article>
+
+        <article class="card">
+          <img src="images/aceiteoliva.jpg" alt="Aceite de oliva español">
+          <h4>Aceite de Oliva Virgen Extra</h4>
+          <p>Primera prensada en frío, ideal para cocina gourmet.</p>
+        </article>
+
+        <article class="card">
+          <img src="images/quesomanchego.jpg" alt="Queso manchego">
+          <h4>Queso Manchego</h4>
+          <p>Queso madurado ideal para tapas y aperitivos.</p>
+        </article>
+
+      </div>
+
+      <p class="ver-mas"><a href="productos.html">Ver todos los productos →</a></p>
+    </section>
+
+  </main>
+
+  <!-- Pie de página común -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p><strong>Bodega González</strong> — Fildernstrasse 15, 6030 Ebikon, Suiza</p>
+      <p>Tel: +34 600 000 000 — Email: info@bodegagonzalez.com</p>
+      <p>© 2025 Bodega González</p>
+    </div>
+  </footer>
+
+  <!-- Script general -->
+  <script src="script.js"></script>
+
+  <!-- Mensaje de bienvenida -->
+  <div id="welcome-overlay" class="welcome-overlay">
+    <div id="welcome-message" class="welcome-message">
+      ¡Bienvenido a <strong>Bodega González</strong>!<br>
+      <span class="sub">Tradición, sabor y productos de España</span>
+    </div>
+  </div>
+
+</body>
+</html>
