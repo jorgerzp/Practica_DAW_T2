@@ -27,13 +27,13 @@ body {
 
 /* ===== CONTENEDORES ===== */
 .container {
-  width: 90%;
+  width: 95%; /* Un poco más ancho para que quepa el menú en móvil */
   max-width: var(--max-width);
   margin: auto;
 }
 
 /* ======================================================
-   CABECERA Y MENÚ
+   CABECERA Y MENÚ (FIJO PARA TODAS LAS PANTALLAS)
 ====================================================== */
 header {
   background: var(--blanco);
@@ -49,6 +49,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0.8rem 0;
+  flex-wrap: wrap; /* Permite que el menú baje si no hay espacio */
+  gap: 10px;
 }
 
 .brand {
@@ -56,25 +58,34 @@ header {
   align-items: center;
   color: var(--vino);
   text-decoration: none;
+  font-size: 1.1rem;
 }
 
 .flag {
-  width: 24px;
+  width: 20px;
   border-radius: 3px;
   margin-left: 6px;
+}
+
+/* Menú siempre visible y en horizontal */
+.main-nav {
+  display: block !important;
 }
 
 .main-nav ul {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem; /* Espacio reducido para que quepa en móvil */
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .main-nav a {
   text-decoration: none;
   color: var(--gris);
   font-weight: 500;
-  padding: 5px 10px;
+  padding: 5px 8px;
+  font-size: 0.9rem; /* Tamaño optimizado */
   position: relative;
 }
 
@@ -100,14 +111,9 @@ header {
   width: 100%;
 }
 
-/* Menú móvil */
+/* OCULTAR HAMBURGUESA SIEMPRE */
 .nav-toggle {
-  display: none;
-  background: none;
-  border: 0;
-  font-size: 1.7rem;
-  cursor: pointer;
-  color: var(--vino);
+  display: none !important;
 }
 
 /* ======================================================
@@ -125,24 +131,20 @@ header {
   align-items: center;
 }
 
-/* ===== TITULO Y DESCRIPCIÓN ===== */
 .hero-text h1 {
-  text-align: center;
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   color: var(--vino);
   margin-bottom: 1rem;
 }
 
 .hero-text p.lead {
-  text-align: center; 
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
 }
 
-/* ===== BOTONES ===== */
 .hero-text .cta {
   display: flex;
-  justify-content: flex-start; 
+  justify-content: center; /* Centrado para mejor estética */
   gap: 0.5rem;
   width: 100%; 
   margin-bottom: 1.5rem;
@@ -150,253 +152,75 @@ header {
 
 .btn {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
+  padding: 0.7rem 1.2rem;
   border-radius: 30px;
   background: var(--vino);
   color: var(--blanco);
   font-weight: 600;
-  margin: 0.5rem 0;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
-.btn:hover {
-  transform: translateY(-3px);
-  background: var(--vino-oscuro);
-}
-
-.btn.ghost {
-  background: transparent;
-  color: var(--vino);
-  border: 2px solid var(--vino);
-}
-
-.btn.ghost:hover {
-  background: var(--vino);
-  color: var(--blanco);
-  transform: translateY(-3px);
-}
-
-/* ===== IMÁGENES DEL HERO ===== */
 .hero-image {
   display: flex;
   justify-content: center; 
-  gap: 1.2rem;
+  gap: 1rem;
   flex-wrap: wrap;
 }
 
 .hero-image img {
   width: 30%;
-  min-width: 280px;
-  max-width: 320px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 12px;
-  transition: 0.4s ease;
-}
-
-.hero-image img:hover {
-  transform: scale(1.07);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-}
-
-/* ======================================================
-   SECCIONES GENERALES
-====================================================== */
-section {
-  padding: 3rem 0;
-}
-
-h2 {
-  font-size: 2rem;
-  color: var(--vino);
-  margin-bottom: 1rem;
-}
-
-/* ======================================================
-   ABOUT / HISTORIA / LISTAS
-====================================================== */
-.sala-barrica-img {
-  display: block;
-  margin: 1.5rem auto;
-  width: 80%;
-  max-width: 600px;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-}
-
-#sobre-nosotros ul,
-#sobre-nosotros ol,
-.container ul,
-.container ol {
-  text-align: left;
-  list-style-position: inside;
-  padding-left: 1rem;
-  margin-left: 0;
-}
-
-/* ======================================================
-   TARJETAS DE PRODUCTOS
-====================================================== */
-.cards {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-}
-
-.card {
-  width: 300px;
-  background: var(--blanco);
-  border-radius: 10px;
-  box-shadow: var(--sombra);
-  overflow: hidden;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card img {
-  width: 100%;
-  height: 190px;
-  object-fit: cover;
-}
-
-/* ======================================================
-   VIDEO
-====================================================== */
-.video-container {
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.video-container video {
-  width: 100%;
-  border-radius: 12px;
-}
-
-/* ======================================================
-   GALERÍA DE CATAS
-====================================================== */
-.galeria-fotos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.4rem;
-}
-
-.galeria-fotos img {
-  width: 30%;
   min-width: 250px;
-  height: 200px;
+  height: 180px;
   object-fit: cover;
-  border-radius: 10px;
-  transition: 0.4s ease;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-.galeria-fotos img:hover {
-  transform: scale(1.07);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  border-radius: 12px;
 }
 
 /* ======================================================
-   TABLAS
+   RESTO DE SECCIONES (IGUAL QUE ANTES)
 ====================================================== */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1.5rem;
-}
+section { padding: 2.5rem 0; }
+h2 { font-size: 1.8rem; color: var(--vino); margin-bottom: 1rem; }
 
-th {
-  background: var(--vino);
-  color: var(--blanco);
-  padding: 0.8rem;
-}
+.cards { display: flex; justify-content: center; flex-wrap: wrap; gap: 1.5rem; }
+.card { width: 280px; background: var(--blanco); border-radius: 10px; box-shadow: var(--sombra); overflow: hidden; }
+.card img { width: 100%; height: 180px; object-fit: cover; }
 
-td {
-  padding: 0.8rem;
-  border-bottom: 1px solid #eee;
-}
+.video-container { width: 100%; max-width: 500px; margin: 0 auto; }
+.video-container video { width: 100%; border-radius: 12px; }
+
+.galeria-fotos { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+.galeria-fotos img { width: 30%; min-width: 220px; height: 180px; object-fit: cover; border-radius: 10px; }
+
+table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+th { background: var(--vino); color: var(--blanco); padding: 0.6rem; }
+td { padding: 0.6rem; border-bottom: 1px solid #eee; }
+
+form { max-width: 500px; margin: auto; background: #fff; padding: 1.5rem; border-radius: 10px; box-shadow: var(--sombra); display: grid; gap: 0.8rem; }
+input, textarea, select { padding: 0.7rem; border-radius: 6px; border: 1px solid #ccc; }
+
+.site-footer { padding: 1.5rem 0; background: #fff; border-top: 1px solid #eee; }
 
 /* ======================================================
-   FORMULARIOS
+   RESPONSIVE FINAL (SIN HAMBURGUESA)
 ====================================================== */
-form {
-  max-width: 600px;
-  margin: auto;
-  background: #fff;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: var(--sombra);
-  display: grid;
-  gap: 1rem;
-}
+@media(max-width:768px){
+  /* Forzamos que el menú siga visible y arriba */
+  .header-inner {
+    flex-direction: column;
+    padding: 0.5rem 0;
+  }
 
-input, textarea, select {
-  padding: 0.8rem;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-
-input:focus, textarea:focus {
-  outline: 2px solid var(--oro);
-}
-
-/* ======================================================
-   FOOTER
-====================================================== */
-.site-footer .footer-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.25rem;
-  text-align: center;
-  width: 100%;
-  padding: 1rem 0;
-}
-
-/* ======================================================
-   RESPONSIVE GENERAL
-====================================================== */
-@media(max-width:900px){
   .main-nav ul {
-    flex-direction: column;
-    position: absolute;
-    right: 15px;
-    top: 70px;
-    background: #fff;
-    padding: 1rem;
-    border-radius: 10px;
-    display: none;
+    gap: 0.3rem;
   }
 
-  .main-nav.open ul { display: flex; }
-
-  .nav-toggle { display: block; }
-
-  .cards { flex-direction: column; }
-
-  .about { flex-direction: column; }
-
-  .galeria-fotos img {
-    width: 90%;
-    height: 220px;
+  .main-nav a {
+    font-size: 0.8rem;
+    padding: 4px 6px;
   }
 
-  /* Hero móvil: botones y texto adaptables */
-  .hero-inner {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero-text .cta {
-    justify-content: flex-start;
-    width: 100%;
-  }
+  .hero-text h1 { font-size: 1.8rem; }
+  .hero-image img { width: 90%; height: 200px; }
+  .galeria-fotos img { width: 90%; height: 200px; }
 }
