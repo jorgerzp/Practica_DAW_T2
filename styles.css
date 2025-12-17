@@ -27,13 +27,13 @@ body {
 
 /* ===== CONTENEDORES ===== */
 .container {
-  width: 95%; /* Un poco más ancho para que quepa el menú en móvil */
+  width: 95%;
   max-width: var(--max-width);
   margin: auto;
 }
 
 /* ======================================================
-   CABECERA Y MENÚ (FIJO PARA TODAS LAS PANTALLAS)
+   CABECERA Y MENÚ (VISIBLES EN TODAS LAS PANTALLAS)
 ====================================================== */
 header {
   background: var(--blanco);
@@ -49,7 +49,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0.8rem 0;
-  flex-wrap: wrap; /* Permite que el menú baje si no hay espacio */
+  flex-wrap: wrap;
   gap: 10px;
 }
 
@@ -67,7 +67,7 @@ header {
   margin-left: 6px;
 }
 
-/* Menú siempre visible y en horizontal */
+/* Forzamos que el menú sea siempre visible sin hamburguesa */
 .main-nav {
   display: block !important;
 }
@@ -75,7 +75,7 @@ header {
 .main-nav ul {
   list-style: none;
   display: flex;
-  gap: 0.5rem; /* Espacio reducido para que quepa en móvil */
+  gap: 0.5rem;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -85,7 +85,7 @@ header {
   color: var(--gris);
   font-weight: 500;
   padding: 5px 8px;
-  font-size: 0.9rem; /* Tamaño optimizado */
+  font-size: 0.9rem;
   position: relative;
 }
 
@@ -94,7 +94,6 @@ header {
   color: var(--vino);
 }
 
-/* subrayado animado */
 .main-nav a::after {
   content: "";
   width: 0%;
@@ -111,7 +110,7 @@ header {
   width: 100%;
 }
 
-/* OCULTAR HAMBURGUESA SIEMPRE */
+/* OCULTAR BOTÓN HAMBURGUESA */
 .nav-toggle {
   display: none !important;
 }
@@ -144,7 +143,7 @@ header {
 
 .hero-text .cta {
   display: flex;
-  justify-content: center; /* Centrado para mejor estética */
+  justify-content: center;
   gap: 0.5rem;
   width: 100%; 
   margin-bottom: 1.5rem;
@@ -177,7 +176,55 @@ header {
 }
 
 /* ======================================================
-   RESTO DE SECCIONES (IGUAL QUE ANTES)
+   IMAGEN DE HISTORIA (AJUSTE MÓVIL)
+====================================================== */
+.sala-barrica-img {
+  display: block;
+  margin: 1.5rem auto;
+  width: 100%;        /* Ajuste automático al ancho del móvil */
+  max-width: 600px;   /* Tamaño máximo en ordenador */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  object-fit: cover;
+}
+
+/* ======================================================
+   MENSAJE DE BIENVENIDA (ESTILOS PARA JS)
+====================================================== */
+.welcome-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: opacity 0.5s ease;
+}
+
+.welcome-overlay.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.welcome-message {
+  color: white;
+  text-align: center;
+  padding: 20px;
+  transform: scale(0.8);
+  transition: transform 0.5s ease;
+}
+
+.welcome-message.show {
+  transform: scale(1);
+}
+
+/* ======================================================
+   RESTO DE SECCIONES
 ====================================================== */
 section { padding: 2.5rem 0; }
 h2 { font-size: 1.8rem; color: var(--vino); margin-bottom: 1rem; }
@@ -202,10 +249,9 @@ input, textarea, select { padding: 0.7rem; border-radius: 6px; border: 1px solid
 .site-footer { padding: 1.5rem 0; background: #fff; border-top: 1px solid #eee; }
 
 /* ======================================================
-   RESPONSIVE FINAL (SIN HAMBURGUESA)
+   RESPONSIVE FINAL
 ====================================================== */
 @media(max-width:768px){
-  /* Forzamos que el menú siga visible y arriba */
   .header-inner {
     flex-direction: column;
     padding: 0.5rem 0;
@@ -221,6 +267,6 @@ input, textarea, select { padding: 0.7rem; border-radius: 6px; border: 1px solid
   }
 
   .hero-text h1 { font-size: 1.8rem; }
-  .hero-image img { width: 90%; height: 200px; }
-  .galeria-fotos img { width: 90%; height: 200px; }
+  .hero-image img { width: 95%; height: 200px; }
+  .galeria-fotos img { width: 95%; height: 200px; }
 }
